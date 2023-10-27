@@ -1,0 +1,86 @@
+.hero {
+    margin-top: 100px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.hero__heading {
+    max-width: 520px;
+    width: 100%;
+    color: #3D3D3F;
+    font-family: "Rubik";
+    font-size: 72px;
+    font-weight: 500;
+    margin-bottom: 42px;
+}
+
+.hero__text {
+    max-width: 546px;
+    width: 100%;
+    color: #3D3D3F;
+    font-family: "Rubik";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 40px;
+}
+
+.hero__link {
+    @include btn;
+}
+
+
+@media only screen and (max-width: 850px) {
+    .hero .container {
+        flex-direction: column;
+    }
+
+    .hero__info {
+        order: 2;
+        text-align: center;
+    }
+    
+    .hero__link {
+        order: -2;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    .hero__heading {
+        font-size: 56px;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .hero__text {
+        max-width: 490px;
+        width: 100%;
+    }
+
+    .hero__img {
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .hero__heading {
+        font-size: 45px;
+    }
+
+    .hero__text {
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 365px) {
+    .hero__heading {
+        font-size: 36px;
+    }
+}

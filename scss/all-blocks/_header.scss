@@ -1,0 +1,137 @@
+.header {
+    margin-top: 20px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.nav__list {
+    display: flex;
+    gap: 60px;
+}
+
+.nav__link--link {
+    display: none;
+}
+
+.header__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    background-color: #fff;
+    display: none;
+}
+
+.btn__menu {
+    display: none;
+}
+
+.btn__exit {
+    display: none;
+}
+
+.nav__link {
+    color: #3D3D3F;
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: var(--sabzi);
+    }
+}
+
+
+.header__link--link {
+    @include btn;
+}
+
+
+@media only screen and (max-width: 770px) {
+    .nav__list {
+        display: none;  
+    }
+
+    .btn {
+        display: block;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .menu__exit {
+        display: none;
+    }
+
+    .exit__menu {
+        display: block;
+    }
+
+    .nav__blok {
+        display: block;
+        position: absolute;
+        background-color: var(--sabzi);
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        top: 90px;
+        left: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        animation: navblok 0.5s ease;
+
+        & > li > .nav__link {
+            font-size: 20px;
+            color: #fff;
+           
+        }
+
+        & > li {
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        @keyframes navblok {
+            form {
+                transform: translateX(-70%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 410px) {
+    .header__link--link {
+        display: none;
+    }
+
+    .nav__blok > li .nav__link--link {
+        display: block;
+        border: 2px solid var(--sabzi);
+        background-color: #fff;
+        color: var(--sabzi);
+        padding: 12px 24px;
+        border-radius: 8px;
+    }
+}
